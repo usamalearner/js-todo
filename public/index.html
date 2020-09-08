@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDX2a3dAFW2spOCLQGZDcATa_Rs114cDXE",
+    authDomain: "todobyusama.firebaseapp.com",
+    databaseURL: "https://todobyusama.firebaseio.com",
+    projectId: "todobyusama",
+    storageBucket: "todobyusama.appspot.com",
+    messagingSenderId: "249679302937",
+    appId: "1:249679302937:web:c77ff84ea7d8953145b588",
+    measurementId: "G-RTPFH4YBQ0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <style>
+        body{
+            margin: 10%;
+            text-align: center;
+            background-color: crimson;
+        }
+        #todo-item{
+            width: 250px;
+            height: 30px;
+        }
+        button{
+            padding: 10px;
+            margin: 5px;
+        }
+        .btn{
+            background-color: rgb(156, 118, 150);
+        }
+        .edit{
+            background-color: rgb(255, 72, 133);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo App By Syed Usama Ali</h1>
+    <hr>
+    <div>
+        
+        <input type="text" placeholder="Enter todo" id="todo-item">
+        <button onclick="add_todo()">Add Item</button>
+        <button onclick="del_all()">Delete All</button>
+    </div>
+<div>
+    <ul id="list">
+
+    </ul>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
